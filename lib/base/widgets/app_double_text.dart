@@ -11,8 +11,13 @@ class AppDoubleText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(bigText, style:AppStyles.headLIneStyle3),
+        Text(bigText, style:AppStyles.headLineStyle2),
+        InkWell(
+          onTap: (){},
+          child: Text(smallText, style:AppStyles.headLineStyle3.copyWith(color: AppStyles.primaryColor)),
+        )
       ],
     );
   }

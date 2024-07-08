@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
+import 'package:ticket_app/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,9 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         // ignore: prefer_const_literals_to_create_immutables
         children: [
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -29,14 +32,14 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           "Good Morning",
-                          style: AppStyles.headLIneStyle3,
+                          style: AppStyles.headLineStyle3,
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
                           "Book Tickets",
-                          style: AppStyles.headLIneStyle1,
+                          style: AppStyles.headLineStyle1,
                         ),
                       ],
                     ),
@@ -52,26 +55,34 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xFFF4F6FD)
-                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color(0xFFF4F6FD)),
                   child: Row(
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(FluentSystemIcons.ic_fluent_search_filled, color:Color(0xFFFBFC20)),
+                        Icon(FluentSystemIcons.ic_fluent_search_filled,
+                            color: Color(0xFFFBFC20)),
                         Text("Search Icon"),
                       ]),
-                )
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                AppDoubleText(
+                  bigText: 'Upcoming Flights',
+                  smallText: 'View All',
+                ),
+                TicketView(),
               ],
             ),
-          )
-        ,
-        SizedBox(height: 10,),
-        AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View All',),
+          ),
         ],
       ),
     );
