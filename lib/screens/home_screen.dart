@@ -15,7 +15,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
       body: ListView(
-        // ignore: prefer_const_literals_to_create_immutables
         children: [
           SizedBox(
             height: 40,
@@ -78,6 +77,9 @@ class HomeScreen extends StatelessWidget {
                 AppDoubleText(
                   bigText: 'Upcoming Flights',
                   smallText: 'View All',
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 TicketView(),
               ],
