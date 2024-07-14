@@ -8,7 +8,8 @@ import 'package:ticket_app/base/widgets/text_style_fourth.dart';
 import 'package:ticket_app/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+   final Map <String, dynamic> ticket;
+  const TicketView({super.key, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class TicketView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      TextStyleThird(text: "NYC"),
+                      TextStyleThird(text: ticket["from"]['code']),
                       Expanded(child: Container()),
                       BigDot(),
                       Expanded(
@@ -58,7 +59,7 @@ class TicketView extends StatelessWidget {
                       )),
                       BigDot(),
                       Expanded(child: Container()),
-                      TextStyleThird(text: "LDN"),
+                      TextStyleThird(text: ticket["to"]["code"]),
                     ],
                   ),
                   SizedBox(
@@ -68,15 +69,15 @@ class TicketView extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 100,
-                        child: TextStyleFourth(text: "New-York"),
+                        child: TextStyleFourth(text: ticket["from"]["name"]),
                       ),
                       Expanded(child: Container()),
-                      TextStyleFourth(text: "8H 30M"),
+                      TextStyleFourth(text: ticket["flying_time"]),
                       Expanded(child: Container()),
                       SizedBox(
                           width: 100,
                           child: TextStyleFourth(
-                            text: "London",
+                            text: ticket["to"]["name"],
                             align: TextAlign.end,
                           )),
                     ],
@@ -118,17 +119,17 @@ class TicketView extends StatelessWidget {
                   children: [
                     AppColoumTextLayout(
                       alignment: CrossAxisAlignment.start,
-                      topText: "1 May",
+                      topText: ticket["date"],
                       bottomText: "DATE",
                     ),
                     AppColoumTextLayout(
                       alignment: CrossAxisAlignment.center,
-                      topText: "08 : 00 AM",
+                      topText: ticket["departure_time"],
                       bottomText: "Depature time",
                     ),
                     AppColoumTextLayout(
                       alignment: CrossAxisAlignment.end,
-                      topText: "23 ",
+                      topText: ticket["number"].toString(),
                       bottomText: "Number",
                     ),
                   ],
