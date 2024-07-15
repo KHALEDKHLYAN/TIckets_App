@@ -14,10 +14,9 @@ class AllTickets extends StatelessWidget {
           SingleChildScrollView(
             child: Column(
               children: ticketList
-                  .map((SingleTicket) =>
-                      Container(
-                        margin: EdgeInsets.only(bottom: 20),
-                        child: TicketView(ticket: SingleTicket)))
+                  .map((SingleTicket) => Container(
+                      margin: EdgeInsets.only(bottom: 20),
+                      child: TicketView(ticket: SingleTicket, wholeScreen:true)))
                   .toList(),
             ),
           )
