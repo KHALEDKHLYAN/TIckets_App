@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 // ignore: unused_import
-import 'package:ticket_app/screens/all_tickets.dart';
+import 'package:ticket_app/screens/home/all_tickets.dart';
 
 class AppDoubleText extends StatelessWidget {
   const AppDoubleText(
