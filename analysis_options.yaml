@@ -14,6 +14,7 @@ analyzer:
     prefer_const_constructors_in_immutables: ignore
     prefer_const_literals_to_create_immutables: ignore
     prefer_typing_uninitialized_variables: ignore
+    unnecessary_string_escapes: ignore
     use_full_hex_values_for_flutter_colors: ignore
 include: package:flutter_lints/flutter.yaml
 
