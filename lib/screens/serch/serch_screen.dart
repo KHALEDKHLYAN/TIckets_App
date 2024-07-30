@@ -49,6 +49,7 @@ class SerchScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 width: size.width * .42,
+                height: 435,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
@@ -80,36 +81,71 @@ class SerchScreen extends StatelessWidget {
                 ),
               ),
               Column(
-                
                 children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                  width: size.width * .44,
-                  height: 210,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(18),
-                    color: Color(0xFF3AB8B8),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Stack(
                     children: [
-                      Text(
-                        "Discount\nfor Survey",
-                        style: AppStyles.headLineStyle2.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                        width: size.width * .44,
+                        height: 210,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Color(0xFF3AB8B8),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Discount\nfor Survey",
+                              style: AppStyles.headLineStyle2.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Take Survey about our services and get discount",
+                              style: AppStyles.headLineStyle2.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18),
+                            ),
+                          ],
+                        ),
                       ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Take Survey about our services and get discount",
-                        style: AppStyles.headLineStyle2.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18),
+                      Positioned(
+                        right: -45,
+                        top: -40,
+                        child: Container(
+                          padding: EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              width: 18,
+                              color: AppStyles.circleColor,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                )
-              ])
+                  SizedBox(height: 15),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    width: size.width * .44,
+                    height: 210,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEC6545),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: Column(
+                      children: [
+                        Text("Take Love"),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ],
           )
         ],
