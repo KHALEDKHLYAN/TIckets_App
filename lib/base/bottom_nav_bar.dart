@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/screens/home/home_screen.dart';
 import 'package:ticket_app/screens/serch/serch_screen.dart';
+import 'package:ticket_app/screens/tickets/ticket_screens.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -14,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final appScreens = [
     HomeScreen(),
     SerchScreen(),
-    Center(child: Text("Tickets")),
+    TicketScreens(),
     Center(child: Text("Profile")),
   ];
 
